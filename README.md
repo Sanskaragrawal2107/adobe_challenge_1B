@@ -45,9 +45,22 @@ python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
+
 2. Install dependencies:
 ```bash
 pip install -r requirements.txt
+```
+
+### Download Required Models
+
+Before running the script for the first time (if not using Docker), download the required models to avoid runtime downloads and ensure offline/fast execution:
+
+```bash
+# Download the sentence-transformers model
+python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('sentence-transformers/paraphrase-MiniLM-L6-v2', cache_folder='./model_cache')"
+
+# Download the T5 summarization model and tokenizer
+python -c "from transformers import T5ForConditionalGeneration, T5Tokenizer; T5Tokenizer.from_pretrained('t5-small', cache_dir='./model_cache'); T5ForConditionalGeneration.from_pretrained('t5-small', cache_dir='./model_cache')"
 ```
 
 ## 📖 Usage
