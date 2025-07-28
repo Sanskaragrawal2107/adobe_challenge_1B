@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+.project
+.pydevproject
+.settings/
+
+# Project specific
+model_cache/
+__pycache__/
+output/
+challenge1b_output.json
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Models and data
+*.pth
+*.onnx
+*.bin
+
+# Keep input folder structure but ignore PDFs
+input/**/*.pdf
+!input/PDFs/.gitkeep
+
+# Temporary files
+*.log
+*.tmp
